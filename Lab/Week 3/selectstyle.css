@@ -1,0 +1,11 @@
+#main { background-color: #ccc; padding: 1em }
+
+p.red { 
+	color: red; 
+	font-weight: bold;
+	}
+
+p.center { 
+	textalign:center; 
+	fontweight: bolder;
+	} 
