@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Exploring other Form Objects</title>
+    <script type ="text/javascript" > function testbutton (form){
+        Item = form.list.selectedIndex;
+        Result = form.list.options[Item].text; 
+        alert (Result);
+    }
+</script>
+</head>
+<body>
+    <form name="testform">
+        <select name="list" size="3">
+            <option>item 1
+                <option>item 2
+                    <option>item 3
+                    </select><br />
+                    <input type="button" name="button" value="Test" onclick="testbutton(form);">
+                </form>
+            </body>
+            </html>

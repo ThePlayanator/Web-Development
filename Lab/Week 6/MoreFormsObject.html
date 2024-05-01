@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Exploring other Form Objects</title>
+    <script type ="text/javascript" > function testbutton (form){
+        chosen = "";
+        len = document.testform.rad.length; for (i = 0; i <len; i++)
+        { if (document.testform.rad[i].checked)
+            { chosen = document.testform.rad[i].value; }
+        }
+        if ((testform.rad[0].checked==false) && (testform.rad[1].checked==false) && (testform.rad[2].checked==false))
+        { 
+            alert("No university is chosen"); 
+        } else {
+            alert(chosen);
+        }
+    }
+</script>
+</head>
+</body>
+<form name="testform">
+    <input type = radio name = "rad" value = "UM" >Universiti Malaya
+    <input type = radio name = "rad" value = "UKM" >Universiti Kebangsaan Malaysia
+    <input type = radio name = "rad" value = "USM">Universiti Sains Malaysia<br />
+    <input type="button" name="button" value="Click" onclick="testbutton(form);">
+</form>
+</body>
+</html>

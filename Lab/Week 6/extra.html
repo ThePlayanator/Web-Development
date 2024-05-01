@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .activity {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fitness Tracker</h1>
+        <label for="activityName">Activity Name:</label>
+        <input type="text" id="activityName" placeholder="Enter activity name...">
+        <label for="caloriesBurned">Calories Burned:</label>
+        <input type="text" id="caloriesBurned" placeholder="Enter calories burned...">
+        <button onclick="addActivity()">Add Activity</button>
+        <div id="activityList"></div>
+    </div>
+
+<script>
+        function addActivity() {
+    var activityNameInput = document.getElementById("activityName");
+    var caloriesBurnedInput = document.getElementById("caloriesBurned");
+    var activityName = activityNameInput.value.trim();
+    var caloriesBurned = caloriesBurnedInput.value.trim();
+    if (activityName !== "" && caloriesBurned !== "") {
+        var activityList = document.getElementById("activityList");
+        var activityDiv = document.createElement("div");
+        activityDiv.classList.add("activity");
+        var activityContent = "<h2>"+ activityName + "</h2> <p><strong>Calories Burned:</strong> " + caloriesBurned + "</p>";
+        activityDiv.innerHTML = activityContent;
+        activityList.appendChild(activityDiv);
+        // Clear input fields
+        activityNameInput.value = "";
+        caloriesBurnedInput.value = "";
+            }
+        }
+    </script> </body>
+</html>

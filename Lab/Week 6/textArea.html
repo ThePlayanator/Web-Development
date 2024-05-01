@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Exploring other Form Objects</title>
+    <script type ="text/javascript" > function testbutton (form){
+       alert (form.myarea.value);
+    }
+</script>
+</head>
+<body>
+<form name="testform">
+    <textarea name="myarea" cols="40" rows="5">add your text
+    </textarea><br />
+    <input type="button" name="button" value="Test" onclick="testbutton(form);">
+</form>
+</body>
+</html>
