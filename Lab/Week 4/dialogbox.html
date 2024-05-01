@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dialog Boxes and Event Handlers</title>
+<script type="text/javascript"> 
+	function myConfirm(){
+var answer = confirm("You are about to leave our site. We are not responsible for any third party websites contents. Are you sure you want to proceed?");
+
+	if (answer)
+	{
+		window.location="http://www.softpedia.com"; }
+	else
+	{ document.write("Thanks for sticking around."); }
+}
+
+	function myPrompt() { 
+var num1, num2, result; 
+num1 = parseInt(window.prompt("Enter the first number","0")); 
+num2 = parseInt(window.prompt("Enter the second number","0")); 
+result = num1 + num2; 
+document.write('The sum of ' + num1 + ' and ' + num2 + ' is ' + result); 
+} 
+
+</script>
+
+<body>
+<form name="myform">
+<input type="button" value="Download Apps at Softpedia"
+onclick="myConfirm();">
+<input type="button" value="Calculate the sum of 2 numbers"
+onclick="myPrompt();">
+</form>
+</body>
+</head>
+</html>
